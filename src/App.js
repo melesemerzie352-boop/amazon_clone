@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Layout from "./components/layout/Layout";
+// import Header from "./components/header/Header";
+// import Banner from "./components/banner/Banner";
+// import ProductCategory from "./components/productCategory/ProductCategory";
+import Allproducts from "./components/product/Allproducts";
+import ProductDetails from "./components/product/ProductDetails";
+import CategoryProducts from "./components/product/CatagoryProduct";
+// import AppRoutes from "./components/Roter";
+import Login from "./components/header/Login";
+import Cart from "./components/header/Cart";
+import Home from "./components/header/Home";
+import Order from "./components/header/Order";
+import { CartProvider } from "./cart/CartContext";
+function Appp() {
+  return (  
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <BrowserRouter>
+     {/* <Header/>
+     <Banner/>
+      <ProductCategory/> */}
+         <CartProvider>
+      <Routes>
+        
+         <Route element={<Layout />}> 
+  <Route path="/" element={<Home />} />
+  <Route path="/products" element={<Allproducts />} />
+    <Route
+          path="/product/:id"
+          element={<ProductDetails />}
+        />
+        <Route
+  path="/category/:categoryName"
+  element={<CategoryProducts />}
+/>      
+<Route path="/Home" element={<Home/>} />
+<Route path="/Order" element={<Order/>} />
+
+<Route path="/login" element={<Login />} />
+ <Route path="/Cart" element={<Cart />} />
+ 
+          <Route
+  path="/category/:categoryName"
+  element={<CategoryProducts />}
+/>
+  {/* <AppRoutes/> */}
+</Route>
+
+  
+      </Routes>
+    </CartProvider>
+    </BrowserRouter>
+  
     </div>
+
   );
 }
 
-export default App;
+export default Appp;

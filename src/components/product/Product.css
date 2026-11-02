@@ -1,0 +1,84 @@
+
+/* Individual product card */
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  min-width: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Clickable image and title */
+.product-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #111111;
+  text-decoration: none;
+}
+
+/* Product image */
+.product-link img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+/* Product title */
+.product-link h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* Price and rating */
+.product-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+.product-card p:first-of-type {
+  color: #b12704;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Add to Cart button */
+.product-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: auto;
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #f7ca00;
+}
+
+/* Mobile image size */
+@media (max-width: 600px) {
+  .product-link img {
+    height: 150px;
+  }
+
+  .product-link h3 {
+    font-size: 14px;
+  }
+}
