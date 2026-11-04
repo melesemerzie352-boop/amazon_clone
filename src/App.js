@@ -55,6 +55,7 @@ function Appp() {
   
       </Routes>
     </CartProvider>
+    
     </BrowserRouter>
   
     </div>

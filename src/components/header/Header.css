@@ -4,17 +4,19 @@
     background-color: white;
   }
  .the_hole{
+
   position: sticky;
-  top: 0px;
-       text-outline: 0 0 #000;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #131921;
+
  
 }
 .logo{
 background-color: black;
 color: white;
-
-}
-
+} 
 .Location{
   background-color: transparent;
   text-decoration: none;
@@ -118,4 +120,198 @@ text-decoration: none;
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+/* the  following is the  css from  the  ai  in order to add  the  midiaquery  part */
+/* =========================================
+   RESPONSIVE HEADER - MEDIA QUERIES
+========================================= */
+
+/* Large laptops and smaller desktops */
+@media screen and (max-width: 1200px) {
+
+    .header_container {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        width: 85px;
+    }
+
+    .search_product {
+        width: 250px;
+    }
+
+    .right_row {
+        gap: 10px;
+    }
+
+}
+
+
+/* Tablets and smaller laptops */
+@media screen and (max-width: 992px) {
+
+    .header_container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 12px;
+    }
+
+    .left_row1 {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .left_row2 {
+        gap: 10px;
+    }
+
+    .logo {
+        width: 75px;
+    }
+
+    .search_product {
+        width: 220px;
+    }
+
+    .right_row {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* Tablets and large mobile screens */
+@media screen and (max-width: 768px) {
+
+    .header_container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .left_row1 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .left_row2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 85px;
+    }
+
+    .all {
+        width: 20%;
+        min-width: 65px;
+    }
+
+    .search_product {
+        width: 75%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .search_icon {
+        display: none;
+    }
+
+    .right_row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .flag img {
+        width: 25px;
+    }
+
+}
+
+
+/* Mobile phones */
+@media screen and (max-width: 576px) {
+
+    .header_container {
+        padding: 10px;
+    }
+
+    .left_row2 {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .Location {
+        font-size: 12px;
+    }
+
+    .all {
+        width: 25%;
+        font-size: 11px;
+    }
+
+    .search_product {
+        width: 75%;
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .right_row {
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .right_row a {
+        font-size: 12px;
+    }
+
+    .flag {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .flag img {
+        width: 22px;
+    }
+
+}
+
+
+/* Very small mobile phones */
+@media screen and (max-width: 380px) {
+
+    .logo {
+        width: 60px;
+    }
+
+    .Location {
+        font-size: 10px;
+    }
+
+    .right_row {
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .right_row a {
+        font-size: 10px;
+    }
+
+    .search_product {
+        font-size: 11px;
+    }
+
 }
